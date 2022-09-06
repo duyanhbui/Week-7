@@ -21,8 +21,8 @@ int main(){
     std :: cout << o2.get_current_number_of_members() << std :: endl;
     std :: cout << o2.has_instrument("Piano") << std :: endl;
     for(int i = 0; i < o2.get_current_number_of_members();i++){
-        (o2.get_members()+i)->get_instrument();
-        (o2.get_members()+i)->get_experience();
+        std :: cout << (o2.get_members()+i)->get_instrument() << std :: endl;
+        std :: cout << (o2.get_members()+i)->get_experience() << std :: endl;
 
     }
 

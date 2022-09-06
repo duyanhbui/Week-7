@@ -3,11 +3,13 @@
 
 Orchestra :: Orchestra(){
     orchestra_size = 0;
+    cur_size = 0;
     musician_list = new Musician[orchestra_size];
 }
 
 Orchestra :: Orchestra(int size){
     orchestra_size =size;
+    cur_size = 0;
     musician_list = new Musician[orchestra_size];
 }
 
@@ -18,7 +20,7 @@ Musician *Orchestra :: get_members(){
 }
 
 bool Orchestra :: has_instrument(std::string instrument){
-    for(int i = 0; i < orchestra_size;i++){
+    for(int i = 0; i < cur_size;i++){
         if((musician_list + i)->get_instrument() == instrument){
             return true;
         }
